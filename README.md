@@ -1,7 +1,8 @@
 # SureMap
-SureMap is a software package for mapping DNA sequences against a reference genome, such as the human genome. It consists of three algorithms: SureMap-short, SureMap-hard and SureMap-long. SureMap-short is designed for short sequence reads up to 200bp. SureMap-hard is designed for 'hard to map read', the reads which has a high error rate due to the sequencer machine error, or the reads come from the regions in the genome which has a high variation rate against reference genome. This algorithm is suitable for the reads that other aligners can not align them (aligners like bwa-MEM or Bowtie or ...) 
+SureMap is a software package for mapping DNA sequences against a reference genome, such as the human genome. It consists of three algorithms: SureMap-short, SureMap-hard and SureMap-long. SureMap-short is designed for short sequence reads up to 200bp. SureMap-hard is designed for 'hard to map read', the reads which has a high error rate due to the sequencer machine error, or the reads come from the regions in the genome which has a high variation rate against reference genome. This algorithm is suitable for the reads that other aligners can not align them (aligners like bwa-MEM or Bowtie or ...).
+
 SureMap-long is designed for long and very long reads (possibly very noisy reads) like pacBio or Nanopore.
-For all the algorithms, SureMap first needs to construct the FM-index for the reference genome. SureMap-Indexer is doing this job?
+For all the algorithms, SureMap first needs to construct the FM-index for the reference genome. SureMap-Indexer is made for doing this job.
 
 ### Prerequisites
 
@@ -35,6 +36,9 @@ this command, runs SureMap ('hard' algorithm) in sensitive mode to align short a
         SureMap-Aligner.o long -t 30 -L 500 -o output.sam /path/to/index/directory/hg19.fa pacbio.fastq
 this command, runs SureMap ('long' algorithm) to align long reads against reference genome. 'L' denotes fragment lengths in our approximate global alignment algorithm.
 
+        SureMap-Indexer.o ref.fa <outputFolder>
+        
+        
 for additional options, please run SureMap-Aligner.o without any parameter to see the full option.
 
 ## Availabality
