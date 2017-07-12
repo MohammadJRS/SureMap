@@ -24,6 +24,19 @@ SureMap is using the suffix array algorithm implemented by Juha Karkkainen and D
 
         make
 
+## Example Usage
+
+        SureMap-Aligner.o short -t 10 -e 0.1 -m fast -o output.sam /path/to/index/directory/hg19.fa illumina.fastq
+this command, runs SureMap ('short' algorithm) in fast mode with 10 threads to align short reads with error rate less than 0.1 of their length against reference genome.
+
+        SureMap-Aligner.o hard -v 4 -k 10 -g -m sensitive -o output.sam /path/to/index/directory/hg19.fa bwa-unmapped.fastq
+this command, runs SureMap ('hard' algorithm) in sensitive mode to align short and hard-to-map reads against reference genome. maximum number of reports per read is 10.
+        
+        SureMap-Aligner.o long -t 30 -L 500 -o output.sam /path/to/index/directory/hg19.fa pacbio.fastq
+this command, runs SureMap ('long' algorithm) to align long reads against reference genome. 'L' denotes fragment lengths in our approximate global alignment algorithm.
+
+for additional options, please run SureMap-Aligner.o without any parameter to see the full option.
+
 ## Availabality
 SureMap is released under MIT/X11 license. The latest source code is freely available at https://github.com/MohammadJRS/SureMap/.
 precompiled binary for x86_64-linux is available in binary folder.
