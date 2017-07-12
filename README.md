@@ -5,12 +5,10 @@ For all the algorithms, SureMap first needs to construct the FM-index for the re
 
 ### Prerequisites
 
-Download https://github.com/y-256/libdivsufsort
-   and install. Make sure to compile libdivsufsort to static 64-bit libraries,
-   i.e. set options in the main CMakeLists.txt to
-   option(BUILD_SHARED_LIBS "Set to OFF to build static libraries" OFF)
-   option(BUILD_DIVSUFSORT64 "Build libdivsufsort64" ON)
+Download https://github.com/y-256/libdivsufsort and install. Make sure to compile libdivsufsort to static 64-bit libraries, i.e. set options in the main CMakeLists.txt to option(BUILD_SHARED_LIBS "Set to OFF to build static libraries" OFF) option(BUILD_DIVSUFSORT64 "Build libdivsufsort64" ON)
 
+
+SureMap is using the suffix array algorithm implemented by Juha Karkkainen and Dominik Kempa, based on the paper: Engineering a Lightweight External Memory Suffix Array Construction Algorithm. In Proc. 2nd International Conference on Algorithms for Big Data (ICABD) 2014.
 
 ## install
 
@@ -26,7 +24,9 @@ Download https://github.com/y-256/libdivsufsort
 
         make
 
-
+## Availabality
+SureMap is released under MIT/X11 license. The latest source code is freely available at https://github.com/MohammadJRS/SureMap/.
+precompiled binary for x86_64-linux is available in binary folder.
 
 ## Authors
 
@@ -34,16 +34,4 @@ Download https://github.com/y-256/libdivsufsort
 * **Seyed Abolfazl Motahari**
 
 Sharif University Of Technology
-
-
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
 
