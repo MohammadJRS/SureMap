@@ -6,7 +6,9 @@ For all the algorithms, SureMap first needs to construct the FM-index for the re
 
 ### Prerequisites
 
-Download https://github.com/y-256/libdivsufsort and install. Make sure to compile libdivsufsort to static 64-bit libraries, i.e. set options in the main CMakeLists.txt to option(BUILD_SHARED_LIBS "Set to OFF to build static libraries" OFF) option(BUILD_DIVSUFSORT64 "Build libdivsufsort64" ON)
+Download https://github.com/y-256/libdivsufsort and install. Make sure to compile libdivsufsort to static 64-bit libraries, i.e. setoptions in the main CMakeLists.txt to:
+        option(BUILD_SHARED_LIBS "Set to OFF to build static libraries" OFF) 
+        option(BUILD_DIVSUFSORT64 "Build libdivsufsort64" ON)
 
 
 SureMap is using the suffix array algorithm implemented by Juha Karkkainen and Dominik Kempa, based on the paper: Juha Kärkkäinen, Dominik Kempa, Simon J. Puglisi. 'Parallel External Memory Suffix Sorting'. In Proc. 26th Symposium on Combinatorial Pattern Matching (CPM 2015), Springer, 2015, pp. 329-342. 
