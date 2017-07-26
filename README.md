@@ -35,7 +35,8 @@ this command, runs SureMap-hard algorithm in sensitive mode to align short and h
 
         SureMap-Aligner.o hard -v 4 -k 10 -g -m sensitive -o output.sam /path/to/index/directory/hg19.fa bwa-unmapped.fastq
         
-sd
+this command, runs SureMap-long algorithm to align long reads against reference genome. 'L' denotes fragment lengths in our approximate global alignment algorithm.
+
         SureMap-Aligner.o long -t 30 -L 500 -o output.sam /path/to/index/directory/hg19.fa pacbio.fastq
 
 this command build index files for the reference genome 'ref.fa' file
