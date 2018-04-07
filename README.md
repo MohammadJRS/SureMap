@@ -50,10 +50,5 @@ for additional options, please run SureMap-Aligner.o without any parameter to se
 SureMap is released under MIT/X11 license. The latest source code is freely available at https://github.com/MohammadJRS/SureMap/.
 precompiled binary for x86_64-linux is available in binary folder.
 
-## Authors
 
-* **MohammadJavad Rezaei Seraji** 
-* **Seyed Abolfazl Motahari**
-
-Sharif University Of Technology
 
